@@ -29,7 +29,7 @@ num3 = int(input("Por favor ingrese un número par: "))
 if num3 % 2 == 0:
     print ("Ha ingresado un número par")
 else:
-    print ("Por favor, ingrese un número par")
+    print ("Por favor, ingrese un número par") #más adelante se podría incluir un ciclo aquí para repetir la solicitud de un número hasta que sea par
 
 #4) Escribir un programa que solicite al usuario su edad e imprima por pantalla a cuál de las
 #siguientes categorías pertenece:
@@ -53,6 +53,9 @@ else:
 #hay sesgo positivo, negativo o no hay sesgo. Imprimir el resultado por pantalla.
 
 Rta6 = input ("el siguiente programa determinará el sesgo de un conjunto de datos generados al azar. Presione Y para continuar o N para finalizar: ").lower()
+
+#agregue el input anterior para que se sepa que los datos son generados automaticamente y que el usuario este de acuerdo con ello
+
 if Rta6 == "y":
     import random
     numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
@@ -131,6 +134,8 @@ elif magnitud9  < 7:
 elif magnitud9  >= 7:
     print ("Extremo (puede causar graves daños a gran escala)")
 
+#como el código se ejecuta de manera secuencial no hace falta poner en todas las condiciones que el valor esté entre uno y otro
+
 #10) Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
 #del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
 #si el usuario se encuentra en otoño, invierno, primavera o verano
@@ -164,3 +169,5 @@ elif estacion10 ==3:
     print ("VERANO")
 elif estacion10 == 4:
     print ("OTOÑO")
+
+#podria haber hecho un if con varios requisitos  y múltiples resultados, incluso if dentr de if pero me pareció mas elegante así
