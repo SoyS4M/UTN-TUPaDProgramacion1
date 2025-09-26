@@ -66,7 +66,7 @@ listaImpares = []
 i3 = 0
 
 for i3 in range(15):
-    numeros3.append(random.randint(1,100))
+    numeros3.append(random.randint(1,100))              #se van agregando numeros al azar a la lista con cada ciclo
     if numeros3[i3] % 2 == 0:
         listaPares.append(numeros3[i3])
     else:
@@ -128,7 +128,7 @@ for i5 in range (len(alumnosPresentes)):
 
 lista6 = [3, 2, 4, 6, 5, 1, 8]
 
-lista6.insert(0,lista6[6])
+lista6.insert(0,lista6[6])                  #el comando insert permite insertar un elemento en la lista y desplazar a todos los otros elementos
 
 del lista6[7]
 
@@ -178,7 +178,7 @@ for i8 in range (len(notas8)):
     for j8 in range (3):
         if j8 == 0:
             sumaMateria1 = sumaMateria1 + notas8[i8][j8]
-            tempPromedio = notas8[i8][j8]
+            tempPromedio = notas8[i8][j8]                       #no es necesario guardar el promedio de cada alumno por eso se guarda en una variable temporal
         elif j8 == 1:
             sumaMateria2 = sumaMateria2 + notas8[i8][j8]
             tempPromedio = tempPromedio + notas8[i8][j8]
@@ -201,7 +201,7 @@ print("Juego del Ta Te Ti")
 casillas = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]]
 sigue = "s"
 
-def tablero(casillas):
+def tablero(casillas):                      #se define una varible para poder mostrar el tablero luego de cada jugada sin tner que escribir todo el ciclo for cada vez
     for i9 in range (3):
         for j9 in range (3):
             if j9 < 2:
@@ -221,9 +221,9 @@ tablero(casillas)
 while sigue == "s":
     turno1(casillas)
     tablero(casillas)
-    sigue = input ("el juego continua? (s/n): ")
+    sigue = input ("el juego continua? (s/n): ")                #como aun no puedo programar la victoria con la linea de O o X le pregunto al jugador si alguien alcanzó la victoria
     if sigue == "n":
-        print("Ganador jugador 1!")
+        print("Ganador jugador 1!")                             #asumiendo que el juego no continua porque alguien ganó
         break
     turno2(casillas)
     tablero(casillas)
@@ -250,7 +250,7 @@ for i10 in range (len (totalVendido)):
     for j10 in range (4):
         if j10 == 0:
             producto1 = producto1 + totalVendido[i10][j10]
-            tempDia = totalVendido[i10][j10]
+            tempDia = totalVendido[i10][j10]                    #como en ejercicios anteriores se define una variable temporal solo para evaluar la cantidad de ventas por dia
         elif j10 == 1:
             producto2 = producto2 + totalVendido[i10][j10]
             tempDia = tempDia + totalVendido[i10][j10]
@@ -268,5 +268,5 @@ print(f"Totales vendidos: \n Producto n1: {producto1} unidades \n Producto n2: {
 print(f"el día que más unidades se vendieron en total fue el dia #{nroDiaMayorDia} con {diaMayorVentas} unidades vendidas")
 
 totalPorProducto = [[producto1, "Producto 1"], [producto2, "Producto 2"], [producto3, "Producto 3"], [producto4, "Producto 4"]]
-totalPorProducto.sort()
+totalPorProducto.sort()                     #se organiza la lista anidada para que comience por las unidades vendidas, asi al ser ordenadas se puede acceder facilmente a la identidad del producto mas vendido
 print(f"el producto más vendido fue el {totalPorProducto[3][1]} con {totalPorProducto[3][0]} unidades vendidas")
